@@ -7,23 +7,27 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import Paper from '@mui/material/Paper';
 
-export default function DataTable({ data }) {
+export default function ServiceTeamTable({ data }) {
   return (
     <TableContainer component={Paper} style={{ marginTop: '20px' }}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Question 1</TableCell>
-            <TableCell>Question 2</TableCell>
-            <TableCell>Question 3</TableCell>
+            <TableCell>Service Team Name</TableCell>
+            <TableCell>Service Team Project</TableCell>
+            <TableCell>Service Team Description</TableCell>
+            <TableCell>Service Team Alarms</TableCell>
+            <TableCell>Service Team Dependencies</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row, index) => (
             <TableRow key={index}>
-              <TableCell>{row.question1}</TableCell>
-              <TableCell>{row.question2}</TableCell>
-              <TableCell>{row.question3}</TableCell>
+              <TableCell>{row.serviceteamName}</TableCell>
+              <TableCell>{row.serviceteamProject}</TableCell>
+              <TableCell>{row.serviceteamDescription}</TableCell>
+              <TableCell>{row.serviceTeamAlarms}</TableCell>
+              <TableCell>{row.serviceteamDependencies}</TableCell>
             </TableRow>
           ))}
         </TableBody>

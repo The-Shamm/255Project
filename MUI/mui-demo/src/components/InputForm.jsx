@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 export default function InputForm({ onSubmit }) {
-  cont[(FormInput, setFormInput)] = useState({
+  const [formInput, setFormInput] = useState({
     serviceteamName: "",
     serviceteamProject: "",
     serviceteamDescription: "",
@@ -16,65 +16,63 @@ export default function InputForm({ onSubmit }) {
     setFormInput((prevData) => ({ ...prevData, [name]: value }));
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(FormInput);
+    onSubmit(formInput);
     setFormInput({
-      question1: '',
-      question2: '',
-      question3: ''
+      serviceteamName: "",
+      serviceteamProject: "",
+      serviceteamDescription: "",
+      serviceTeamAlarms: "",
+      serviceteamDependencies: "",
     });
   };
 
-
   return (
     <form onSubmit={handleSubmit}>
-    <TextField
-      name="question1"
-      label="Question 1"
-      value={formData.question1}
-      onChange={handleChange}
-      fullWidth
-      margin="normal"
-    />
-    <TextField
-      name="question2"
-      label="Question 2"
-      value={formData.question2}
-      onChange={handleChange}
-      fullWidth
-      margin="normal"
-    />
-    <TextField
-      name="question3"
-      label="Question 3"
-      value={formData.question3}
-      onChange={handleChange}
-      fullWidth
-      margin="normal"
-    />
-    <Button type="submit" variant="contained" color="primary">
-      Submit
-    </Button>
-  </form>
-);
+      <TextField
+        name="serviceteamName"
+        label="Service Team Name"
+        value={formInput.serviceteamName}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        name="serviceteamProject"
+        label="Service Team Project"
+        value={formInput.serviceteamProject}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        name="serviceteamDescription"
+        label="Service Team Description"
+        value={formInput.serviceteamDescription}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        name="serviceTeamAlarms"
+        label="Service Team Alarms"
+        value={formInput.serviceTeamAlarms}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        name="serviceteamDependencies"
+        label="Service Team Dependencies"
+        value={formInput.serviceteamDependencies}
+        onChange={handleChange}
+        fullWidth
+        margin="normal"
+      />
+      <Button type="submit" variant="contained" color="primary">
+        Submit
+      </Button>
+    </form>
+  );
 }
-
- 
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
