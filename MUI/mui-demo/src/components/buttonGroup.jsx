@@ -11,7 +11,7 @@ export default function VariantButtonGroup() {
         flexDirection: 'column',
         alignItems: 'center',
         '& > *': {
-          m: 1,
+          m: 2,
         },
       }}
     >
