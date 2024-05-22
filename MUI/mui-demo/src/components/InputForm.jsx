@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import PropTypes from 'prop-types';
+
 
 export default function InputForm({ onSubmit }) {
   const [formInput, setFormInput] = useState({
@@ -75,4 +77,10 @@ export default function InputForm({ onSubmit }) {
       </Button>
     </form>
   );
-}
+}; 
+
+InputForm.PropTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default InputForm;
