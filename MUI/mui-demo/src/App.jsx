@@ -2,8 +2,9 @@ import { useState } from 'react'
 import ServiceTeamTable from './components/table'
 import InputForm from './components/InputForm'
 import './App.css'
-import VariantButtonGroup from './components/buttonGroup'
-import './styles/styles.css'
+//import VariantButtonGroup from './components/buttonGroup'
+
+
 
 function App() {
   const [formData, setFormData] = useState([]);

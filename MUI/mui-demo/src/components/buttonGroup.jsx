@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react'; 
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
@@ -11,7 +11,7 @@ export default function VariantButtonGroup() {
         flexDirection: 'column',
         alignItems: 'center',
         '& > *': {
-          m: 2,
+          m: 1,
         },
       }}
     >
