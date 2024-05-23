@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import PropTypes from 'prop-types';
+import "../styles/styles.css";
 
 
 const InputForm = ({onSubmit }) => {
@@ -19,8 +20,8 @@ const InputForm = ({onSubmit }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(formInput);
+    e.preventDefault(); 
+    onSubmit(formInput); 
     setFormInput({
       serviceteamName: "",
       serviceteamProject: "",
@@ -31,7 +32,7 @@ const InputForm = ({onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="mainform">
       <TextField
         name="serviceteamName"
         label="Service Team Name"
@@ -39,6 +40,7 @@ const InputForm = ({onSubmit }) => {
         onChange={handleChange}
         fullWidth
         margin="normal"
+        className="TextField"
       />
       <TextField
         name="serviceteamProject"
@@ -79,12 +81,12 @@ const InputForm = ({onSubmit }) => {
   );
 }; 
 
-InputForm.PropTypes = {
+InputForm.propTypesropTypes = {
   onSubmit: PropTypes.func.isRequired,
   serviceteamName: PropTypes.string.isRequired,
 };
 
-InputForm.PropTypes = {
+InputForm.propTypesropTypes = {
   onSubmit: 'ServiceXYZ',
 };
 
