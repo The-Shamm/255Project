@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import ServiceTeamTable from './components/table'
 import InputForm from './components/InputForm'
-import './App.css'
+import Image from './components/profileImage'
+
+
 //import VariantButtonGroup from './components/buttonGroup'
 
 
@@ -15,8 +17,9 @@ function App() {
 
   return (
     <>
+    <div><h3><Image></Image></h3></div>
 <div>
-<h1>***Creator notes for future feature releases***</h1>
+<h1>***Creator  notes for future feature releases***</h1>
 <p>Here are some examples of links to other pages</p>
 <ul><p></p></ul>
 <nav>
