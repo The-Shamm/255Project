@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import PropTypes from 'prop-types';
 
 
-export default function InputForm({ onSubmit }) {
+const InputForm = ({onSubmit }) => {
   const [formInput, setFormInput] = useState({
     serviceteamName: "",
     serviceteamProject: "",
@@ -81,6 +81,11 @@ export default function InputForm({ onSubmit }) {
 
 InputForm.PropTypes = {
   onSubmit: PropTypes.func.isRequired,
+  serviceteamName: PropTypes.string.isRequired,
+};
+
+InputForm.PropTypes = {
+  onSubmit: 'ServiceXYZ',
 };
 
 export default InputForm;

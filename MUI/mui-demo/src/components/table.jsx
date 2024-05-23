@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 
 export default function ServiceTeamTable({ data }) {
   return (
-    <TableContainer component={Paper} style={{ marginTop: '20px' }}>
+    <TableContainer component={Paper} style={{marginTop: '20px', backgroundColor: 'lightblue'}  }>
       <Table>
         <TableHead>
           <TableRow>
