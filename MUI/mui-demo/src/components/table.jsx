@@ -9,7 +9,14 @@ import Paper from '@mui/material/Paper';
 
 export default function ServiceTeamTable({ data }) {
   return (
-    <TableContainer component={Paper} style={{marginTop: '20px', backgroundColor: 'lightblue'}  }>
+    <TableContainer component={Paper} style={{
+      marginTop: '2%', 
+      marginBottom: '10%', 
+      backgroundColor: 'lightblue', 
+      maxWidth: "80%",
+      display: "block", // Change to "flex" once style issue is debugged
+      margin: "0 auto", // delete after debugging
+    }  }>
       <Table>
         <TableHead>
           <TableRow>
