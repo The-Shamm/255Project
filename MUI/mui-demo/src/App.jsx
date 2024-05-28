@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="app=container">
+    <div className="app-container">
     <div><h3><Image></Image></h3></div>
 <div>
 <h1>***Creator  notes for future feature releases***</h1>
